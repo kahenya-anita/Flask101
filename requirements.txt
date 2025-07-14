@@ -11,4 +11,5 @@ Flask-Migrate
 Flask-SQLAlchemy
 pytest
 pytest-cov
+pre-commit
 

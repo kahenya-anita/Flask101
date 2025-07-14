@@ -28,7 +28,13 @@ def index():
 
 @app.route('/about')
 def index():
+    # This is a placeholder for the about page
     return "This is the about page."
+
+@app.route('/home')
+def index():
+    # This is a placeholder for the about page
+    return "This is the home page."
 
 
 if __name__ == '__main__':
