@@ -1,16 +1,17 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
+
 app = Flask(__name__)
 
-#App DB Configurations
-app.config["SQLALCHEMY_DATABASE_URI"] ="sqlite:///flask.db"
+# App DB Configurations
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///flask.db"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
-#Initializing SQLAlchemy
+# Initializing SQLAlchemy
 db = SQLAlchemy(app)
 
-#Initialize Flask Migrate
+# Initialize Flask Migrate
 migrate = Migrate(app, db)
 
 
@@ -20,22 +21,24 @@ class Book(db.Model):
     author = db.Column(db.String(100), nullable=False)
     review = db.Column(db.Text, nullable=False)
     year = db.Column(db.Integer, nullable=False)
-    
-    
-@app.route('/')
+
+
+@app.route("/")
 def index():
     return "Hello, World!"
 
-@app.route('/about')
+
+@app.route("/about")
 def index():
     # This is a placeholder for the about page
     return "This is the about page."
 
-@app.route('/home')
+
+@app.route("/home")
 def index():
     # This is a placeholder for the about page
     return "This is the home page."
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run(debug=True)
