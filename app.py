@@ -29,13 +29,13 @@ def index():
 
 
 @app.route("/about")
-def index():
+def about():
     # This is a placeholder for the about page
     return "This is the about page."
 
 
 @app.route("/home")
-def index():
+def home():
     # This is a placeholder for the about page
     return "This is the home page."
 
