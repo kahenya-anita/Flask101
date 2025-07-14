@@ -9,7 +9,7 @@ on:
       - main
 
 permissions:
-  pull_request: write
+  pull_requests: write
   contents: write
 
 jobs:
